@@ -1,14 +1,15 @@
-import kivy
-
 from kivy.app import App
+from kivy.uix.label import Label
+from kivy.lang.builder import Builder
 from kivy.uix.widget import Widget
-from kivy.uix.widget import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
 
+login_screen = Builder.load_file('login_screen_kv.kv')
 
-class MyApp(App):
+
+class KivyApp(App):
     def build(self):
-        return Label(text='Test')
+        return login_screen
 
 
 if __name__ == '__main__':
